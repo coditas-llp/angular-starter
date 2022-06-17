@@ -1,0 +1,15 @@
+# compiled output
+/build
+/bundle
+/package-lock.json
+package-lock.json
+# dependencies
+/node_modules
+/coverage
+/*/node_modules/*
+.bitmap
+node_modules/
+# e2e
+/e2e/*.js
+/e2e/*.map
+#configs

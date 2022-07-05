@@ -1,9 +1,9 @@
-import { addPost } from './../state/posts.actions';
-import { Post } from './../../models/posts.model';
-import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Store } from '@ngrx/store';
 import { AppState } from 'src/app/store/app.state';
+import { Post } from '../state/posts.model';
+import { addPost } from './../state/posts.actions';
 
 @Component({
   selector: 'app-add-post',
@@ -13,7 +13,7 @@ import { AppState } from 'src/app/store/app.state';
 export class AddPostComponent implements OnInit {
   postForm: FormGroup;
 
-  constructor(private store: Store<AppState>) {}
+  constructor(private store: Store<AppState>) { }
 
   ngOnInit(): void {
     this.postForm = new FormGroup({
@@ -28,18 +28,18 @@ export class AddPostComponent implements OnInit {
     });
   }
 
-  showDescriptionErrors() {
-    const descriptionForm = this.postForm.get('description');
-    if (descriptionForm.touched && !descriptionForm.valid) {
-      if (descriptionForm.errors.required) {
-        return 'Description is required';
-      }
+  // showDescriptionErrors() {
+  //   const descriptionForm = this.postForm.get('description');
+  //   if (descriptionForm.touched && !descriptionForm.valid) {
+  //     if (descriptionForm.errors['required']) {
+  //       return 'Description is required';
+  //     }
 
-      if (descriptionForm.errors.minlength) {
-        return 'Description should be of minimum 10 characters length';
-      }
-    }
-  }
+  //     if (descriptionForm.errors['minlength']) {
+  //       return 'Description should be of minimum 10 characters length';
+  //     }
+  //   }
+  // }
 
   onAddPost() {
     if (!this.postForm.valid) {

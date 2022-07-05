@@ -18,6 +18,7 @@ export class PostsService {
           for (let key in data) {
             posts.push({ ...data[key], id: key });
           }
+
           return posts;
         })
       );

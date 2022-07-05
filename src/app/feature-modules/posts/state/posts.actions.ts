@@ -1,5 +1,5 @@
-import { Post } from './../../models/posts.model';
 import { createAction, props } from '@ngrx/store';
+import { Post } from './posts.model';
 
 export const ADD_POST_ACTION = '[posts page] add post';
 export const ADD_POST_SUCCESS = '[posts page] add post success';

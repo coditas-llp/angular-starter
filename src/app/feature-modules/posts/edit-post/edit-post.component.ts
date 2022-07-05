@@ -1,12 +1,12 @@
-import { updatePost } from './../state/posts.actions';
-import { FormGroup, FormControl, Validators } from '@angular/forms';
-import { Post } from './../../models/posts.model';
-import { getPostById } from './../state/posts.selector';
-import { AppState } from './../../store/app.state';
 import { Component, OnDestroy, OnInit } from '@angular/core';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Store } from '@ngrx/store';
 import { Subscription } from 'rxjs';
+import { AppState } from 'src/app/store/app.state';
+import { Post } from '../state/posts.model';
+import { updatePost } from './../state/posts.actions';
+import { getPostById } from './../state/posts.selector';
 
 @Component({
   selector: 'app-edit-post',
@@ -21,14 +21,14 @@ export class EditPostComponent implements OnInit, OnDestroy {
     private route: ActivatedRoute,
     private store: Store<AppState>,
     private router: Router
-  ) {}
+  ) { }
 
   ngOnInit(): void {
-    this.route.paramMap.subscribe((params) => {
+    this.route.paramMap.subscribe(params => {
       const id = params.get('id');
       this.postSubscription = this.store
         .select(getPostById, { id })
-        .subscribe((data) => {
+        .subscribe(data => {
           this.post = data;
           this.createForm();
         });

@@ -4,32 +4,27 @@
     <hr />
     <form [formGroup]="postForm" (ngSubmit)="onAddPost()">
       <div class="mb-3">
-        <label>Title</label>
-        <input type="text" class="form-control" formControlName="title" />
-
-        <div
-          *ngIf="postForm.get('title').touched && !postForm.get('title').valid"
-        >
-          <div *ngIf="postForm.get('title').errors.required">
+        <div><label class="col-md-3">Title</label></div>
+        <div>
+          <input type="text" class="form-control col-md-7" formControlName="title" />
+        </div>
+        <div *ngIf="postForm.get('title').touched && !postForm.get('title').valid">
+          <div *ngIf="postForm.get('title').errors['required']">
             Title is required
           </div>
-          <div *ngIf="postForm.get('title').errors.minlength">
+          <div *ngIf="postForm.get('title').errors['minlength']">
             Title should be minimum 6 characters
           </div>
         </div>
       </div>
       <div class="mb-3">
-        <label>Description</label>
-        <textarea class="form-control" formControlName="description"></textarea>
-        <div>{{ showDescriptionErrors() }}</div>
+        <div><label>Description</label></div>
+        <input type="textarea" class="form-control" formControlName="description" />
+        <!-- <div>{{ showDescriptionErrors() }}</div> -->
       </div>
 
-      <div class="my-3">
-        <button
-          type="submit"
-          class="btn btn-primary"
-          [disabled]="!postForm.valid"
-        >
+      <div class="my-5 mx-5">
+        <button type="submit" class="btn btn-primary" [disabled]="!postForm.valid">
           Add Post
         </button>
       </div>

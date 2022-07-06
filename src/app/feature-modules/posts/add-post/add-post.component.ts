@@ -13,7 +13,7 @@ import { addPost } from './../state/posts.actions';
 export class AddPostComponent implements OnInit {
   postForm: FormGroup;
 
-  constructor(private store: Store<AppState>) { }
+  constructor(private store: Store<AppState>) {}
 
   ngOnInit(): void {
     this.postForm = new FormGroup({

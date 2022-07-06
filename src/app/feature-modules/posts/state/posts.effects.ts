@@ -11,13 +11,13 @@ import {
   loadPosts,
   loadPostsSuccess,
   updatePost,
-  updatePostSuccess
+  updatePostSuccess,
 } from './posts.actions';
 import { Post } from './posts.model';
 
 @Injectable()
 export class PostsEffects {
-  constructor(private actions$: Actions, private postsService: PostsService) { }
+  constructor(private actions$: Actions, private postsService: PostsService) {}
 
   loadPosts$ = createEffect(() => {
     return this.actions$.pipe(

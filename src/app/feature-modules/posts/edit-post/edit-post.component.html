@@ -7,7 +7,8 @@
       <div class="mb-3">
         <div><label>Title</label></div>
         <input type="text" class="form-control" formControlName="title" />
-        <div *ngIf="postForm.get('title').touched && !postForm.get('title').valid">
+        <div
+          *ngIf="postForm.get('title').touched && !postForm.get('title').valid">
           <div *ngIf="postForm.get('title').errors['required']">
             Title is required
           </div>
@@ -18,8 +19,12 @@
       </div>
       <div class="mb-3">
         <div><label>Description</label></div>
-        <input type="textarea" class="form-control" formControlName="description" />
-        <div *ngIf="
+        <input
+          type="textarea"
+          class="form-control"
+          formControlName="description" />
+        <div
+          *ngIf="
             postForm.get('description').touched &&
             !postForm.get('description').valid
           ">

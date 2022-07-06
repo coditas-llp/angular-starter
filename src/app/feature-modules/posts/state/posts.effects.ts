@@ -38,6 +38,7 @@ export class PostsEffects {
         return this.postsService.addPost(action.post).pipe(
           map(data => {
             const post = { ...action.post, id: data.name };
+            console.log(post);
             return addPostSuccess({ post });
           })
         );

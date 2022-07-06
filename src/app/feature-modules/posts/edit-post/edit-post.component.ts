@@ -5,7 +5,7 @@ import { Store } from '@ngrx/store';
 import { Subscription } from 'rxjs';
 import { AppState } from 'src/app/store/app.state';
 import { Post } from '../state/posts.model';
-import { updatePost } from './../state/posts.actions';
+import { setSelectedId, updatePost } from './../state/posts.actions';
 import { getPostById } from './../state/posts.selector';
 
 @Component({
@@ -26,12 +26,14 @@ export class EditPostComponent implements OnInit, OnDestroy {
   ngOnInit(): void {
     this.route.paramMap.subscribe(params => {
       const id = params.get('id');
-      this.postSubscription = this.store
-        .select(getPostById, { id })
-        .subscribe(data => {
+      if (id) this.store.dispatch(setSelectedId({ id: id }));
+      this.postSubscription = this.store.select(getPostById).subscribe(data => {
+        if (data) {
           this.post = data;
+          console.log(this.post);
           this.createForm();
-        });
+        }
+      });
     });
   }
 

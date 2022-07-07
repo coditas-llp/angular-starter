@@ -39,6 +39,6 @@ This project has ngrx state management tool, following dependencies are added to
 3. "@ngrx/store-devtools": "^13.2.0"
 
 ## Sample code 
-In the feature folder This project has provide some sample code for reference
+In the feature folder This project has provide some sample code for reference inside the /feature-module
 
 

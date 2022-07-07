@@ -25,3 +25,20 @@ feature-modules is used to add all the feature modules into this folder
 We have integrated Jest for unit testing
 
 Run `jest` to execute the unit tests via Jest
+
+## Formatting
+In this project prettier and eslint added to this project for formatting and lint errors 
+
+Run `ng lint` for finding linting errors
+Run `ng lint --fix` for fixing formate and lint errors
+
+## Ngrx state management
+This project has ngrx state management tool, following dependencies are added to this project
+1. "@ngrx/effects": "^14.0.0"
+2. "@ngrx/store": "^13.2.0"
+3. "@ngrx/store-devtools": "^13.2.0"
+
+## Sample code 
+In the feature folder This project has provide some sample code for reference
+
+

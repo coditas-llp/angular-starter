@@ -51,16 +51,12 @@ describe('Posts Reducer', () => {
             });
             const result = postsReducer(filledState, action);
             const expectedEntityMap = { ...filledState.entities };
-            console.log(result);
             posts.forEach(p => (expectedEntityMap[p.id] = p));
-            console.log(expectedEntityMap);
-
             const expectedState: PostsState = {
                 ...filledState,
                 entities: expectedEntityMap,
                 ids: new Array(60).fill(0).map((r, i) => `${i + 1}`),
             };
-            console.log(expectedState);
             expect(result).toEqual(expectedState);
         });
         it('should add post to input state', () => {

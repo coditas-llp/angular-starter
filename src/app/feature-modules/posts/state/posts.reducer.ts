@@ -4,7 +4,7 @@ import {
   deletePostSuccess,
   loadPostsSuccess,
   setSelectedId,
-  updatePostSuccess,
+  updatePostSuccess
 } from './posts.actions';
 import { initialState, postsAdapter, PostsState } from './posts.state';
 
@@ -22,7 +22,7 @@ const _postsReducer = createReducer(
     return postsAdapter.removeOne(id, state);
   }),
   on(loadPostsSuccess, (state, action) => {
-    return postsAdapter.setAll(action.posts, {
+    return postsAdapter.addMany(action.posts, {
       ...state,
     });
   }),

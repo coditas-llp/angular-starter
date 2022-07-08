@@ -41,4 +41,4 @@ export const loadPostsSuccess = createAction(
   props<{ posts: Post[] }>()
 );
 
-export const setSelectedId = createAction(SELECT_POST, props<{ id: string }>());
+export const setSelectedId = createAction(SELECT_POST, props<{ id: number }>());

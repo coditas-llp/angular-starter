@@ -4,7 +4,7 @@ import {
   deletePostSuccess,
   loadPostsSuccess,
   setSelectedId,
-  updatePostSuccess
+  updatePostSuccess,
 } from './posts.actions';
 import { initialState, postsAdapter, PostsState } from './posts.state';
 

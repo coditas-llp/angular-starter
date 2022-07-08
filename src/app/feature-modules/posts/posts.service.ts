@@ -7,7 +7,7 @@ import { Post } from './state/posts.model';
   providedIn: 'root',
 })
 export class PostsService {
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {}
 
   getPosts(): Observable<Post[]> {
     return this.http

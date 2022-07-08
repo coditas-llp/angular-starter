@@ -34,4 +34,4 @@ const routes: Routes = [
     EffectsModule.forFeature([PostsEffects]),
   ],
 })
-export class PostsModule { }
+export class PostsModule {}

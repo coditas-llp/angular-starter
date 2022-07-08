@@ -13,7 +13,7 @@ import { getPosts } from './../state/posts.selector';
 })
 export class PostsListComponent implements OnInit {
   posts: Observable<Post[]>;
-  constructor(private store: Store<AppState>) { }
+  constructor(private store: Store<AppState>) {}
 
   ngOnInit(): void {
     this.posts = this.store.select(getPosts);

@@ -1,4 +1,3 @@
-
-export interface AppState { }
+export interface AppState {}
 
 export const appReducer = {};

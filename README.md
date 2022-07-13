@@ -32,14 +32,14 @@ Each
 ## Running unit tests
 We have integrated Jest for unit testing
 
-Run `npm run test` to execute the unit tests via [Jest](https://jestjs.io/docs/cli), it executes `jest` command internally
-To run single test file `jest <file-name>`
-To get the coverage of the tests run `npm run test:coverage` , it executes `jest --coverage` command internally
+Run `npm run test` to execute the unit tests via [Jest](https://jestjs.io/docs/cli), it executes `jest` command internally. 
+To run single test file `jest <file-name>`. 
+To get the coverage of the tests run `npm run test:coverage` , it executes `jest --coverage` command internally. 
 
 ## Formatting
-In this project prettier and eslint added to this project for formatting and lint errors 
-Run `ng lint` for finding linting errors
-Run `ng lint --fix` for fixing formate and lint errors by lint directly
+In this project prettier and eslint added to this project for formatting and lint errors.
+Run `ng lint` for finding linting errors.
+Run `ng lint --fix` for fixing formate and lint errors by lint directly.
 
 ## Ngrx state management
 This project has ngrx state management tool, following dependencies are added to this project
@@ -47,7 +47,7 @@ This project has ngrx state management tool, following dependencies are added to
 2. "@ngrx/store": "^13.2.0"
 3. "@ngrx/store-devtools": "^13.2.0"
 
-For reference you can refer this - [Sample code](https://github.com/raviparmar-coditas/angular-starter/tree/state-management/src/app/feature-modules/posts)
+For reference you can refer this - [Sample code](https://github.com/raviparmar-coditas/angular-starter/tree/state-management/src/app/feature-modules/posts).
 in this sample code we have provide CRUD operation using ngrx store management 
 
 ## Sample code 

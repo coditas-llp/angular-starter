@@ -32,9 +32,9 @@ Each
 ## Running unit tests
 We have integrated Jest for unit testing
 
-Run `npm run test` to execute the unit tests via [Jest](https://jestjs.io/docs/cli), it executes `jest` command internally. 
-To run single test file `jest <file-name>`. 
-To get the coverage of the tests run `npm run test:coverage` , it executes `jest --coverage` command internally. 
+Run `npm run test` to execute the unit tests via [Jest](https://jestjs.io/docs/cli), it executes `jest` command internally.\
+To run single test file `jest <file-name>`. \
+To get the coverage of the tests run `npm run test:coverage` , it executes `jest --coverage` command internally. \
 
 ## Formatting
 In this project prettier and eslint added to this project for formatting and lint errors.

@@ -11,23 +11,23 @@ This project is divided into core, shared and feature-modules based on uses case
 ### src/core
 Core folder has core has constants, interfaces, modals, interceptoprs and guards folder to kept the files based on its use cases.
 This folder is divide into following subfolder as per the use cases:
-1. src/core/constants:- This folder is used to kept constants for your features. 
-2. src/core/interfaces:- This folder is used to kept interfaces for your features. 
-3. src/core/modals:- This folder is used to kept modals for your features. 
-4. src/core/interceptoprs:- This folder is used to kept interceptoprs for your features. 
-5. src/core/guards:- This folder is used to add auth guard for routing. 
+1. `src/core/constants`:- This folder is used to kept constants for your features. 
+2. `src/core/interfaces`:- This folder is used to kept interfaces for your features. 
+3. `src/core/modals`:- This folder is used to kept modals for your features. 
+4. `src/core/interceptoprs`:- This folder is used to kept interceptoprs for your features. 
+5. `src/core/guards`:- This folder is used to add auth guard for routing. 
 
 ### src/shared
 shared folder has components, pipes, services, utilities to kept the common files across the feature modules 
 
-1. src/core/components:- To add common components across all the modules eg. card component
-2. src/core/pipes:- To add common pipes across all the modules eg. arrayToString pipe
-3. src/core/services:- To add common services across all the modules eg. loader service to handle loader for your project
-4. src/core/utilities:- To add utilities across all the modules eg. some common generic function which can we used common across the project
+1. `src/core/components`:- To add common components across all the modules eg. card component
+2. `src/core/pipes`:- To add common pipes across all the modules eg. arrayToString pipe
+3. `src/core/services`:- To add common services across all the modules eg. loader service to handle loader for your project
+4. `src/core/utilities`:- To add utilities across all the modules eg. some common generic function which can we used common across the project
 
 ### src/feature-modules
 
-src/feature-modules is used to add all your the feature modules into this folder. As a sample we have provided sample code for feature module in this branch- [Sample code](https://github.com/raviparmar-coditas/angular-starter/tree/state-management)
+`src/feature-modules` is used to add all your the feature modules into this folder. As a sample we have provided sample code for feature module in this branch- [Sample code](https://github.com/raviparmar-coditas/angular-starter/tree/state-management)
 Each
 
 ## Running unit tests

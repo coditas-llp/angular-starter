@@ -26,7 +26,8 @@ shared folder has components, pipes, services, utilities to kept the common file
 4. src/core/utilities:- To add utilities across all the modules eg. some common generic function which can we used common across the project
 
 ### src/feature-modules
-/feature-modules is used to add all your the feature modules into this folder. As a sample we have provided sample code for feature module in this branch- [Sample code](https://github.com/raviparmar-coditas/angular-starter/tree/state-management)
+
+src/feature-modules is used to add all your the feature modules into this folder. As a sample we have provided sample code for feature module in this branch- [Sample code](https://github.com/raviparmar-coditas/angular-starter/tree/state-management)
 Each
 
 ## Running unit tests
@@ -34,11 +35,11 @@ We have integrated Jest for unit testing
 
 Run `npm run test` to execute the unit tests via [Jest](https://jestjs.io/docs/cli), it executes `jest` command internally.\
 To run single test file `jest <file-name>`. \
-To get the coverage of the tests run `npm run test:coverage` , it executes `jest --coverage` command internally. \
+To get the coverage of the tests run `npm run test:coverage` , it executes `jest --coverage` command internally.
 
 ## Formatting
-In this project prettier and eslint added to this project for formatting and lint errors.
-Run `ng lint` for finding linting errors.
+In this project prettier and eslint added to this project for formatting and lint errors. \
+Run `ng lint` for finding linting errors. \
 Run `ng lint --fix` for fixing formate and lint errors by lint directly.
 
 ## Ngrx state management
@@ -47,11 +48,11 @@ This project has ngrx state management tool, following dependencies are added to
 2. "@ngrx/store": "^13.2.0"
 3. "@ngrx/store-devtools": "^13.2.0"
 
-For reference you can refer this - [Sample code](https://github.com/raviparmar-coditas/angular-starter/tree/state-management/src/app/feature-modules/posts).
+For reference you can refer this - [Sample code](https://github.com/raviparmar-coditas/angular-starter/tree/state-management/src/app/feature-modules/posts)
 in this sample code we have provide CRUD operation using ngrx store management 
 
 ## Sample code 
-We have this [Sample code](https://github.com/raviparmar-coditas/angular-starter/tree/state-management) this branch for sample code.
+We have this [Sample code](https://github.com/raviparmar-coditas/angular-starter/tree/state-management) this branch for sample code. \
 In this branch we have provided same code for CURD operation in the `src/feature/post` folder 
 
 

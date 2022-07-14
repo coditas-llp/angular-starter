@@ -26,14 +26,38 @@ src
 │    │───interceptors
 │    │     │  sample-interceptor.ts  
 │    │   
-│    │───guards
-│    │     │  auth-guard.ts  
-│       
-│       
+│    └───guards
+│        │  auth-guard.ts  
 │   
-└───folder2
-    │   file021.txt
-    │   file022.txt
+│───shared
+│    │   
+│    │───components
+│    │     │  button.component.ts
+│    │     │  modal.component.ts
+│    │      
+│    │───pipes
+│    │     │  arrayToString.pipe.ts
+│    │   
+│    │───modals
+│    │     │  sample-modal.ts
+│    │   
+│    │───services
+│    │     │  http.service.ts  
+│    │   
+│    └───utilities
+│        │  common-utilities.ts  
+│   
+└───feature-modules
+     │   
+     └───post-feature
+            │   post.module.ts
+            │   post.routing.module.ts
+            │   
+            └───create
+                   │   create.component.ts
+                   │   create.component.html
+                   │   create.component.scss
+
 ```
 
 ### src/core

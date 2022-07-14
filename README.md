@@ -91,8 +91,8 @@ To get the coverage of the tests run `npm run test:coverage` , it executes `jest
 
 ## Formatting
 In this project prettier and eslint added to this project for formatting and lint errors. \
-Run `ng lint` for finding linting errors. \
-Run `ng lint --fix` for fixing formate and lint errors by lint directly.
+Run `npm run lint` for finding linting errors, it executes `ng lint` command internally.\
+Run `npm run lint:fix` for fixing formate and lint errors by lint directly, it executes `ng lint --fix` command internally.\
 
 ## Ngrx state management
 This project has ngrx state management tool, following dependencies are added to this project

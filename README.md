@@ -8,6 +8,34 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The appli
 
 ## Code folder structure
 This project is divided into core, shared and feature-modules based on uses cases
+
+```
+src 
+│
+│───core
+│    │   
+│    │───constants
+│    │     │  sample-constant.ts
+│    │      
+│    │───interfaces
+│    │     │  sample-interface.ts
+│    │   
+│    │───modals
+│    │     │  sample-modal.ts
+│    │   
+│    │───interceptors
+│    │     │  sample-interceptor.ts  
+│    │   
+│    │───guards
+│    │     │  auth-guard.ts  
+│       
+│       
+│   
+└───folder2
+    │   file021.txt
+    │   file022.txt
+```
+
 ### src/core
 Core folder has core has constants, interfaces, modals, interceptoprs and guards folder to kept the files based on its use cases.
 This folder is divide into following subfolder as per the use cases:

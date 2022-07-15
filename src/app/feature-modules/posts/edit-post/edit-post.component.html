@@ -3,12 +3,11 @@
     <h3>Update Post</h3>
     <hr />
 
-    <form [formGroup]="postForm" (ngSubmit)="onSubmit()">
+    <form [formGroup]="postForm">
       <div class="mb-3">
         <div><label>Title</label></div>
         <input type="text" class="form-control" formControlName="title" />
-        <div
-          *ngIf="postForm.get('title').touched && !postForm.get('title').valid">
+        <div *ngIf="postForm.get('title').touched && !postForm.get('title').valid">
           <div *ngIf="postForm.get('title').errors['required']">
             Title is required
           </div>
@@ -19,12 +18,8 @@
       </div>
       <div class="mb-3">
         <div><label>Description</label></div>
-        <input
-          type="textarea"
-          class="form-control"
-          formControlName="description" />
-        <div
-          *ngIf="
+        <input type="textarea" class="form-control" formControlName="description" />
+        <div *ngIf="
             postForm.get('description').touched &&
             !postForm.get('description').valid
           ">
@@ -38,7 +33,9 @@
       </div>
 
       <div class="my-3">
-        <button type="submit" class="btn btn-primary">Update Post</button>
+        <button type="submit" class="btn btn-primary" id="update-button" (click)="onSubmit()">
+          Update Post
+        </button>
       </div>
     </form>
   </div>

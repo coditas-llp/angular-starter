@@ -13,7 +13,7 @@ import { addPost } from './../state/posts.actions';
 export class AddPostComponent implements OnInit {
   postForm: FormGroup;
 
-  constructor(private store: Store<AppState>) {}
+  constructor(private store: Store<AppState>) { }
 
   ngOnInit(): void {
     this.postForm = new FormGroup({
@@ -27,19 +27,6 @@ export class AddPostComponent implements OnInit {
       ]),
     });
   }
-
-  // showDescriptionErrors() {
-  //   const descriptionForm = this.postForm.get('description');
-  //   if (descriptionForm.touched && !descriptionForm.valid) {
-  //     if (descriptionForm.errors['required']) {
-  //       return 'Description is required';
-  //     }
-
-  //     if (descriptionForm.errors['minlength']) {
-  //       return 'Description should be of minimum 10 characters length';
-  //     }
-  //   }
-  // }
 
   onAddPost() {
     if (!this.postForm.valid) {

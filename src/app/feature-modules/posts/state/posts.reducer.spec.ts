@@ -23,13 +23,13 @@ describe('Posts Reducer', () => {
         filledState = {
             ids: posts.map(p => p.id),
             entities: entityMap,
-            selectedId: 0,
+            selectedId: '0',
         };
 
         emptyState = {
             ids: [],
             entities: {},
-            selectedId: 0,
+            selectedId: '0',
         };
     });
 
@@ -106,16 +106,16 @@ describe('Posts Reducer', () => {
             const postToDelete = '30';
             const action = deletePostSuccess({ id: postToDelete });
             const result = postsReducer(filledState, action);
-            expect(result.entities[30]).toBeUndefined();
-            expect(result.ids).not.toContain(30);
+            expect(result.entities['30']).toBeUndefined();
+            expect(result.ids).not.toContain('30');
             expect(result.ids.length).toBe(posts.length - 1);
         });
         it('should set the selected post Id in state', () => {
-            const action = setSelectedId({ id: 30 });
+            const action = setSelectedId({ id: '30' });
             const result = postsReducer(emptyState, action);
             expect(result).toEqual({
                 ...emptyState,
-                selectedId: 30,
+                selectedId: '30',
             });
         });
     });

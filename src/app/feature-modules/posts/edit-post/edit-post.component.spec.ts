@@ -49,7 +49,7 @@ describe('EditPostComponent', () => {
     component = fixture.componentInstance;
     mockStore = TestBed.inject(MockStore);
     mockGetPostById = mockStore.overrideSelector(getPostById, {
-      id: 1,
+      id: '1',
       title: 'title 1',
       description: 'describe Post',
     });
@@ -80,7 +80,7 @@ describe('EditPostComponent', () => {
       component.postForm.patchValue(postForm);
       expect(component.postForm.valid).toBeTruthy();
       const post: Post = {
-        id: 1,
+        id: '1',
         title: postForm.title,
         description: postForm.description,
       };

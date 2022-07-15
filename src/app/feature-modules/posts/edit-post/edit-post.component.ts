@@ -25,7 +25,7 @@ export class EditPostComponent implements OnInit, OnDestroy {
 
   ngOnInit(): void {
     const id = this.route.snapshot.paramMap.get('id');
-    if (id) this.store.dispatch(setSelectedId({ id: +id }));
+    if (id) this.store.dispatch(setSelectedId({ id: id }));
     this.postSubscription = this.store.select(getPostById).subscribe(data => {
       if (data) {
         this.post = data;

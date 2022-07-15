@@ -7,7 +7,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
 ## Code folder structure
-This project is divided into core, shared and feature-modules based on uses cases
+This project is divided into core, shared and feature-modules based on use cases
 
 ```
 src 
@@ -106,5 +106,6 @@ in this sample code we have provide CRUD operation using ngrx store management
 ## Sample code 
 We have this [Sample code](https://github.com/raviparmar-coditas/angular-starter/tree/state-management) this branch for sample code. \
 In this branch we have provided same code for CURD operation in the `src/feature/post` folder 
+To load post after running serve command go to `http://localhost:4200/posts`
 
 

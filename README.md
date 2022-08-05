@@ -79,8 +79,7 @@ shared folder has components, pipes, services, utilities to kept the common file
 
 ### src/feature-modules
 
-`src/feature-modules` is used to add all your the feature modules into this folder. As a sample we have provided sample code for feature module in this branch- [Sample code](https://github.com/raviparmar-coditas/angular-starter/tree/state-management)
-Each
+`src/feature-modules` is used to add all your the feature modules into this folder. As a sample we have provided sample code for feature module in this branch- [Sample code](https://github.com/coditas-llp/angular-starter/tree/sample)
 
 ## Running unit tests
 We have integrated Jest for unit testing
@@ -100,11 +99,11 @@ This project has ngrx state management tool, following dependencies are added to
 2. "@ngrx/store": "^13.2.0"
 3. "@ngrx/store-devtools": "^13.2.0"
 
-For reference you can refer this - [Sample code](https://github.com/raviparmar-coditas/angular-starter/tree/state-management/src/app/feature-modules/posts)
+For reference you can refer this - [Sample code](https://github.com/coditas-llp/angular-starter/tree/sample/src/app/feature-modules/posts)
 in this sample code we have provide CRUD operation using ngrx store management 
 
 ## Sample code 
-We have this [Sample code](https://github.com/raviparmar-coditas/angular-starter/tree/state-management) this branch for sample code. \
+We have this [Sample code](https://github.com/coditas-llp/angular-starter/tree/sample) this branch for sample code. \
 In this branch we have provided same code for CURD operation in the `src/feature/post` folder 
 To load post after running serve command go to `http://localhost:4200/posts`
 

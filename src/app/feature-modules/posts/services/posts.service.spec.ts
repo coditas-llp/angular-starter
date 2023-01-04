@@ -4,8 +4,8 @@ import {
   HttpTestingController,
 } from '@angular/common/http/testing';
 import { TestBed } from '@angular/core/testing';
-import { PostsService } from './services/posts.service';
-import { generatePosts, Post } from './state/posts.model';
+import { PostsService } from '../services/posts.service';
+import { generatePosts, Post } from '../state/posts.model';
 
 describe('PostsService', () => {
   let service: PostsService;

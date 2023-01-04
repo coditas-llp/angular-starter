@@ -8,7 +8,10 @@
       </button>
     </div>
 
-    <table id="posts" class="table table-striped" *ngIf="posts | async as postsData">
+    <table
+      id="posts"
+      class="table table-striped"
+      *ngIf="posts | async as postsData">
       <thead>
         <tr>
           <th>Id</th>
@@ -24,8 +27,12 @@
           <td>{{ post.description }}</td>
           <td>
             <button class="btn btn-primary" [routerLink]="['edit', post.id]">
-              Update</button>&nbsp;
-            <button class="btn btn-danger" id="delete-icon" (click)="onDeletePost(post.id)">
+              Update</button
+            >&nbsp;
+            <button
+              class="btn btn-danger"
+              id="delete-icon"
+              (click)="onDeletePost(post.id)">
               Delete
             </button>
           </td>

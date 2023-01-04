@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { Actions, createEffect, ofType } from '@ngrx/effects';
 import { Update } from '@ngrx/entity';
 import { map, mergeMap, switchMap } from 'rxjs/operators';
-import { PostsService } from '../../../shared/services/posts.service';
+import { PostsService } from '../posts.service';
 import {
   addPost,
   addPostSuccess,

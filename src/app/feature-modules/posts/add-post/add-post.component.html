@@ -6,13 +6,9 @@
       <div class="mb-3">
         <div><label class="col-md-3">Title</label></div>
         <div>
-          <input
-            type="text"
-            class="form-control col-md-7"
-            formControlName="title" />
+          <input type="text" class="form-control col-md-7" formControlName="title" />
         </div>
-        <div
-          *ngIf="postForm.get('title').touched && !postForm.get('title').valid">
+        <div *ngIf="postForm.get('title').touched && !postForm.get('title').valid">
           <div *ngIf="postForm.get('title').errors['required']">
             Title is required
           </div>
@@ -23,19 +19,12 @@
       </div>
       <div class="mb-3">
         <div><label>Description</label></div>
-        <input
-          type="textarea"
-          class="form-control"
-          formControlName="description" />
+        <input type="textarea" class="form-control" formControlName="description" />
         <!-- <div>{{ showDescriptionErrors() }}</div> -->
       </div>
 
       <div class="my-5 mx-5">
-        <button
-          type="submit"
-          class="btn btn-primary"
-          id="add-button"
-          [disabled]="!postForm.valid"
+        <button type="submit" class="btn btn-primary" id="add-button" [disabled]="!postForm.valid"
           (click)="onAddPost()">
           Add Post
         </button>

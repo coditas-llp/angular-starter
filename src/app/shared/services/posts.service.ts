@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
-import { Post } from './state/posts.model';
+import { Post } from '../../feature-modules/posts/state/posts.model';
 @Injectable({
   providedIn: 'root',
 })

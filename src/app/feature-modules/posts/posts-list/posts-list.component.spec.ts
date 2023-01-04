@@ -13,15 +13,12 @@ describe('PostsListComponent', () => {
   let fixture: ComponentFixture<PostsListComponent>;
   let mockStore: MockStore<PostsState>;
 
-  beforeEach(async(() => {
+  beforeEach(() => {
     TestBed.configureTestingModule({
       declarations: [PostsListComponent],
       imports: [RouterTestingModule],
       providers: [provideMockStore()],
     }).compileComponents();
-  }));
-
-  beforeEach(() => {
     fixture = TestBed.createComponent(PostsListComponent);
     component = fixture.componentInstance;
     mockStore = TestBed.inject(MockStore);
@@ -31,7 +28,6 @@ describe('PostsListComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
-
   describe('Add post functionality', () => {
     let onDeletePost: jest.SpyInstance;
     let dispatchActionSPy: jest.SpyInstance;
@@ -39,11 +35,6 @@ describe('PostsListComponent', () => {
     let mockPosts = generatePosts();
 
     beforeEach(() => {
-      fixture = TestBed.createComponent(PostsListComponent);
-      component = fixture.componentInstance;
-      mockStore = TestBed.inject(MockStore);
-      fixture.detectChanges();
-      console.log(fixture, '>>>>');
       onDeletePost = jest.spyOn(component, 'onDeletePost');
       dispatchActionSPy = jest.spyOn(mockStore, 'dispatch');
       onConfirm = jest.spyOn(window, 'confirm').mockReturnValue(true);

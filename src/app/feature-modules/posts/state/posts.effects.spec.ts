@@ -5,7 +5,7 @@ import { Action } from '@ngrx/store';
 import { provideMockStore } from '@ngrx/store/testing';
 import { cold, hot } from 'jasmine-marbles';
 import { Observable } from 'rxjs';
-import { PostsService } from './../posts.service';
+import { PostsService } from './../services/posts.service';
 import {
   addPost,
   addPostSuccess,

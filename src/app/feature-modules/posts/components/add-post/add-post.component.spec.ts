@@ -2,9 +2,9 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { By } from '@angular/platform-browser';
 import { MockStore, provideMockStore } from '@ngrx/store/testing';
-import { PostsState } from '../state/posts.state';
-import { addPost } from './../state/posts.actions';
-import { generatePosts, Post } from './../state/posts.model';
+import { PostsState } from '../../state/posts.state';
+import { addPost } from '../../state/posts.actions';
+import { generatePosts, Post } from '../../state/posts.model';
 import { AddPostComponent } from './add-post.component';
 
 describe('AddPostComponent', () => {

@@ -1,0 +1,12 @@
+<div class="row">
+    <div>
+        <div>
+            <cdts-add-post></cdts-add-post>
+        </div>
+        <div>
+            <cdts-posts-list
+            [posts]="posts | async"
+            (selectedPostEmiiter)="onSelectPostData($event)"></cdts-posts-list>
+        </div>
+    </div>
+</div>

@@ -5,10 +5,10 @@ import { ActivatedRoute } from '@angular/router';
 import { RouterTestingModule } from '@angular/router/testing';
 import { DefaultProjectorFn, MemoizedSelector } from '@ngrx/store';
 import { MockStore, provideMockStore } from '@ngrx/store/testing';
-import { generatePosts, Post } from '../state/posts.model';
-import { updatePost } from './../state/posts.actions';
-import { getPostById } from './../state/posts.selector';
-import { PostsState } from './../state/posts.state';
+import { generatePosts, Post } from '../../state/posts.model';
+import { updatePost } from '../../state/posts.actions';
+import { getPostById } from '../../state/posts.selector';
+import { PostsState } from '../../state/posts.state';
 import { EditPostComponent } from './edit-post.component';
 
 describe('EditPostComponent', () => {

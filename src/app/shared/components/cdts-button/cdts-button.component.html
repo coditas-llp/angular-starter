@@ -1,0 +1,6 @@
+<button 
+[type]="buttonType"
+[disabled]="disabled"
+[ngClass]="{'disabled_button': disabled,'danger_button': type === 'DangerButton','Grey_button': type === 'GreyButton', 'standard_button': !disabled && !(type === 'GreyButton')}"
+(click)="checkDisabled()"
+>{{label}}</button>

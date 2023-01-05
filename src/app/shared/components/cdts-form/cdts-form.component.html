@@ -1,0 +1,37 @@
+<div class="row my-4">
+    <div class="col-md-12">
+        <h3>{{formHeading}}</h3>
+        <hr />
+        <form [formGroup]="postForm">
+            <div class="mb-3">
+                <div><label class="col-md-3">Title</label></div>
+                <div>
+                    <input type="text" class="form-control col-md-7" formControlName="title" />
+                </div>
+                <div *ngIf="postForm.get('title').touched && !postForm.get('title').valid">
+                    <div *ngIf="postForm.get('title').errors['required']">
+                        Title is required
+                    </div>
+                    <div *ngIf="postForm.get('title').errors['minlength']">
+                        Title should be minimum 6 characters
+                    </div>
+                </div>
+            </div>
+            <div class="mb-3">
+                <div><label>Description</label></div>
+                <input type="textarea" class="form-control" formControlName="description" />
+                <!-- <div>{{ showDescriptionErrors() }}</div> -->
+            </div>
+
+            <div class="my-5 mx-5">
+                <!-- <button type="submit" class="btn btn-primary" id="add-button" [disabled]="!postForm.valid"
+          (click)="onAddPost()">
+          Add Post
+        </button> -->
+                <cdts-button [type]="'Standard'" [buttonType]="'Submit'" id="add-button" [disabled]="!postForm.valid"
+                    [label]="buttonLabel" (click)="onSubmitClick()">
+                </cdts-button>
+            </div>
+        </form>
+    </div>
+</div>

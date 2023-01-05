@@ -8,6 +8,7 @@ import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { environment } from 'src/environments/environment';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import {SharedModule} from './shared/shared.module'
 
 @NgModule({
   declarations: [AppComponent],
@@ -17,6 +18,7 @@ import { AppComponent } from './app.component';
     ReactiveFormsModule,
     HttpClientModule,
     FormsModule,
+    SharedModule,
     EffectsModule.forRoot([]),
     StoreModule.forRoot({}),
     StoreDevtoolsModule.instrument({

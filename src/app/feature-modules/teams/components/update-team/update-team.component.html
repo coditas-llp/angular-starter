@@ -1,9 +1,9 @@
 <form [formGroup]="teamForm" (ngSubmit)="onSubmit()">
-  <span class="form-control">
+  <div class="form-control">
     Team Name : <input type="text" formControlName="name" />
-  </span>
-  <span class="form-control">
+  </div>
+  <div class="form-control">
     Users : <input type="text" formControlName="users" />
-  </span>
+  </div>
   <button type="submit">Update Team</button>
 </form>

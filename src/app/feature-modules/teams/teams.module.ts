@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { EffectsModule } from '@ngrx/effects';
 import { StoreModule } from '@ngrx/store';
-import { AddTeamComponent } from './container/add-team/add-team.component';
+import { AddTeamComponent } from './components/add-team/add-team.component';
 import { TeamsListComponent } from './container/teams-list/teams-list.component';
 import { TeamsService } from './services/teams.service';
 import { TeamsEffects } from './store/effects/teams.effect';

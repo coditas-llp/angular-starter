@@ -1,0 +1,34 @@
+.navbar{
+  padding: 0% 5%;
+  width: 100%;
+  display: flex;
+    justify-content:space-between;
+    align-items: center;
+    .logo{
+      width: 10%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      .logo-main{
+        font-size: x-large;
+      }
+      .logo-sub{
+        text-transform: uppercase;
+        letter-spacing:5px;
+      }
+    }
+  .navbar-items{
+    width: 20%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: larger;
+    .active{
+      text-decoration: underline;
+    }
+  }
+}
+.content{
+  padding: 0% 8%;
+}

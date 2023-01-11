@@ -1,0 +1,15 @@
+<h2>Teams List</h2>
+<button (click)="navigateToAddTeam()">Add Team</button>
+<ul>
+  <li *ngFor="let team of teams$ | async; let i = index">
+    <div class="list-item" (click)="teamClicked(team)">
+      {{ team.name
+      }}<button class="delete" (click)="deleteTeam(team)">Delete</button>
+    </div>
+    <div class="list-item-content" *ngIf="selectedTeam === i">
+      <update-team
+        [team]="team"
+        (teamUpdated)="updateTeam($event)"></update-team>
+    </div>
+  </li>
+</ul>

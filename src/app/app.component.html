@@ -1,1 +1,17 @@
-<h1>Coditas Angular starter</h1>
+<div class="navbar">
+  <div class="logo">
+    <div class="logo-main">NgRx</div>
+    <div class="logo-sub">Demo</div>
+  </div>
+  <div class="navbar-items">
+    <div class="navbar-item" routerLink="teams" routerLinkActive="active">
+      Teams
+    </div>
+    <div class="navbar-item" routerLink="users" routerLinkActive="active">
+      Users
+    </div>
+  </div>
+</div>
+<div class="content">
+  <router-outlet></router-outlet>
+</div>

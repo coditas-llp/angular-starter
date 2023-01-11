@@ -4,6 +4,8 @@
 
 export const environment = {
   production: false,
+  backendBaseUrl:
+    'https://angular-starter-ngrx-sample-default-rtdb.asia-southeast1.firebasedatabase.app/',
 };
 
 /*

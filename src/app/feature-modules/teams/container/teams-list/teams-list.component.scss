@@ -1,0 +1,9 @@
+.delete, .update{
+  font-size:x-small;
+}
+.list-item{
+  cursor: pointer;
+  &:hover{
+    text-decoration: underline;
+  }
+}

@@ -4,12 +4,19 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { DumbSampleComponent } from './shared/components/dumb-sample/dumb-sample.component';
 import { StoreModule } from '@ngrx/store';
-import { reducers, metaReducers } from './core/store/reducers';
-import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { EffectsModule } from '@ngrx/effects';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [AppComponent, DumbSampleComponent],
-  imports: [BrowserModule, AppRoutingModule, StoreModule.forRoot(reducers, { metaReducers })],
+  imports: [
+    BrowserModule,
+    HttpClientModule,
+    AppRoutingModule,
+    StoreModule.forRoot({}),
+    EffectsModule.forRoot(),
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })

@@ -1,11 +1,14 @@
 <h2>Teams</h2>
 <div class="teams">
   <div class="teams-list">
-    <ul>
-      <li *ngFor="let team of teams$ | async; let i = index">
+    <div class="loading-text" *ngIf="teamsLoading">Loading...</div>
+    <ul *ngIf="!teamsLoading">
+      <li *ngFor="let team of teams; let i = index">
         <div class="list-item" (click)="teamClicked(team)">
-          {{ team.name
-          }}<button class="delete" (click)="deleteTeam(team)">Delete</button>
+          <div class="team-name">
+            {{ team.name }}
+          </div>
+          <button class="delete" (click)="deleteTeam(team)">Delete</button>
         </div>
         <div class="list-item-content" *ngIf="selectedTeam === i">
           <update-team
@@ -16,6 +19,10 @@
     </ul>
   </div>
   <div class="add-team">
-    <add-team [teams]="teams" (addTeam)="addNewTeam($event)"> </add-team>
+    <add-team
+      [teams]="teams"
+      [newTeamStatus]="newTeamStatus"
+      (addTeam)="addNewTeam($event)">
+    </add-team>
   </div>
 </div>

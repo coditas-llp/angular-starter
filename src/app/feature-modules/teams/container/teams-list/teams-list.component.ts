@@ -3,6 +3,7 @@ import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
 import { Team } from '../../interfaces/team';
 import { addTeam, removeTeam } from '../../store/actions/teams.actions';
+import { NewTeamStatus, TeamsState } from '../../store/state/teams.state';
 
 @Component({
   selector: 'teams-list',
@@ -10,13 +11,19 @@ import { addTeam, removeTeam } from '../../store/actions/teams.actions';
   styleUrls: ['./teams-list.component.scss'],
 })
 export class TeamsListComponent implements OnInit {
-  teams$: Observable<Team[]> = this.store.select(state => state.teams);
+  teamsState$: Observable<TeamsState> = this.store.select(
+    state => state.teamsState
+  );
   teams: Team[];
+  teamsLoading: boolean = true;
   selectedTeam: number;
-  constructor(private store: Store<{ teams: Team[] }>) {}
+  newTeamStatus: NewTeamStatus;
+  constructor(private store: Store<{ teamsState: TeamsState }>) {}
   ngOnInit() {
-    this.teams$.subscribe(teams => {
-      this.teams = teams;
+    this.teamsState$.subscribe(teamsState => {
+      this.teams = teamsState.teams;
+      this.teamsLoading = teamsState.teamsLoading;
+      this.newTeamStatus = teamsState.addNewTeam;
     });
   }
   teamClicked(team: Team) {
@@ -31,7 +38,6 @@ export class TeamsListComponent implements OnInit {
   }
   deleteTeam(team: Team) {
     const newTeamList = this.teams.filter(t => t.id !== team.id);
-    console.log(newTeamList);
     this.store.dispatch(removeTeam({ teams: newTeamList }));
   }
 }

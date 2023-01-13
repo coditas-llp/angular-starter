@@ -1,0 +1,22 @@
+.teams {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  .teams-list {
+    width: 48%;
+    border: 2px solid;
+    border-radius: 10px;
+
+    .list-item-content {
+      margin-bottom: 15px;
+    }
+  }
+  .add-team {
+    padding: 20px 30px;
+    border: 2px solid;
+    border-radius: 10px;
+    width: 48%;
+  }
+}

@@ -1,0 +1,18 @@
+<div class="teams-list">
+  <div class="loading-text" *ngIf="teamsLoading">Loading...</div>
+  <ul *ngIf="!teamsLoading">
+    <li *ngFor="let team of teams; let i = index">
+      <div class="list-item">
+        <div class="team-name" (click)="onTeamClicked(team)">
+          {{ team.name }}
+        </div>
+        <button class="delete" (click)="onDeleteTeam(team)">Delete</button>
+      </div>
+      <div class="list-item-content" *ngIf="selectedTeam === i">
+        <update-team
+          [team]="team"
+          (teamUpdated)="onAddNewTeam($event)"></update-team>
+      </div>
+    </li>
+  </ul>
+</div>

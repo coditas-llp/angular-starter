@@ -7,5 +7,7 @@
     <label for="users">Users</label> <br />
     <input type="text" formControlName="users" />
   </div>
-  <button [disabled]="disableSubmit" type="submit">Add Team</button>
+  <button [disabled]="disableSubmit || !teamForm.valid" type="submit">
+    Add Team
+  </button>
 </form>

@@ -1,16 +1,23 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
 import { Team } from '../../interfaces/team';
-import { addTeam, removeTeam } from '../../store/actions/teams.actions';
+import {
+  addTeam,
+  loadTeams,
+  removeTeam,
+} from '../../store/actions/teams.actions';
 import { NewTeamStatus, TeamsState } from '../../store/state/teams.state';
 
 @Component({
-  selector: 'teams-list',
-  templateUrl: './teams-list.component.html',
-  styleUrls: ['./teams-list.component.scss'],
+  selector: 'teams',
+  templateUrl: './teams-container.component.html',
+  styleUrls: ['./teams-container.component.scss'],
 })
-export class TeamsListComponent implements OnInit {
+export class TeamsContainerComponent {
+  constructor(private store: Store<{ teamsState: TeamsState }>) {
+    this.store.dispatch(loadTeams());
+  }
   teamsState$: Observable<TeamsState> = this.store.select(
     state => state.teamsState
   );
@@ -18,7 +25,6 @@ export class TeamsListComponent implements OnInit {
   teamsLoading: boolean = true;
   selectedTeam: number;
   newTeamStatus: NewTeamStatus;
-  constructor(private store: Store<{ teamsState: TeamsState }>) {}
   ngOnInit() {
     this.teamsState$.subscribe(teamsState => {
       this.teams = teamsState.teams;

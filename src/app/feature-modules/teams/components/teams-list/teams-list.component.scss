@@ -1,0 +1,22 @@
+.teams-list {
+  .loading-text {
+    padding: 20px;
+  }
+  .list-item {
+    margin: 5px 0px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    .team-name:hover {
+      cursor: pointer;
+      text-decoration: underline;
+    }
+    .delete {
+      margin-left: 5px;
+      font-size: x-small;
+    }
+  }
+  .list-item-content {
+    margin-bottom: 15px;
+  }
+}

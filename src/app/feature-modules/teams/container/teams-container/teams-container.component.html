@@ -1,0 +1,19 @@
+<h2>Teams</h2>
+<div class="teams">
+  <div class="teams-list">
+    <teams-list
+      [teamsLoading]="teamsLoading"
+      [selectedTeam]="selectedTeam"
+      [teams]="teams"
+      (teamClicked)="teamClicked($event)"
+      (deleteTeam)="deleteTeam($event)"
+      (addNewTeam)="addNewTeam($event)"></teams-list>
+  </div>
+  <div class="add-team">
+    <add-team
+      [teams]="teams"
+      [newTeamStatus]="newTeamStatus"
+      (addTeam)="addNewTeam($event)">
+    </add-team>
+  </div>
+</div>

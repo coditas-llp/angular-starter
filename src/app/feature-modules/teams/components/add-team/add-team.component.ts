@@ -7,7 +7,7 @@ import {
   Output,
   SimpleChanges,
 } from '@angular/core';
-import { FormControl } from '@angular/forms';
+import { FormControl, Validators } from '@angular/forms';
 import { FormGroup } from '@angular/forms';
 import { Store } from '@ngrx/store';
 import { Team } from '../../interfaces/team';
@@ -39,7 +39,7 @@ export class AddTeamComponent implements OnInit, OnChanges {
   initializForm() {
     this.teamForm = new FormGroup({
       id: new FormControl(''),
-      name: new FormControl(''),
+      name: new FormControl('', [Validators.required]),
       users: new FormControl(''),
     });
   }

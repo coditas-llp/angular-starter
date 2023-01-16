@@ -161,3 +161,4 @@ in this sample code we have provide CRUD operation using ngrx store management
 We have this [Sample code](https://github.com/coditas-llp/angular-starter/tree/ngrx-sample) this branch for sample code. \
 In this branch we have provided same code for CURD operation in the `src/feature/post` folder
 To load post after running serve command go to `http://localhost:4200/posts`
+Watch the recorded session here - [Angular Starter Project: A Walkthrough](https://www.youtube.com/watch?v=X3Rn_vX5paI) 

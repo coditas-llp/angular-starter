@@ -2,7 +2,6 @@
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "cli": {
     "analytics": false,
-    "defaultCollection": "@ngrx/schematics",
     "schematicCollections": [
       "@ngrx/schematics"
     ]
